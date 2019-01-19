@@ -1,0 +1,27 @@
+<center>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title">Sign-Up</h2>
+    <form action="/signup" method="post">
+<!-- 
+  the action and the method indicate which route it will submit to post "/signup" in app.rb
+-->
+    <div class="forms">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="text" name="first_name" placeholder="First Name">
+      <input type="text" name="last_name" placeholder="Last Name">
+      <input type="email" name="email" placeholder="Enter your e-mail">
+      <p><small id="emailHelp" class="form-text text-warning">
+      <p><strong>We'll never share your email with anyone else.</p>
+      <input type="submit" class="btn btn-primary" value="Sign Up!">
+    </form>
+    <br><br>
+<!-- Link back to the /login -->
+    <p>Already have an account?</strong></p>
+    <a href="/login"><button type="button" class="btn btn-success">Log-In</button></a>
+    </div>
+  </div>
+</div>
+</center>
+

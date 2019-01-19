@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <div class="col-1">
+  <nav class="navbar col-10">
+  Rumblr
+      
+    <!-- check if the user is logged in -->
+        <% if session[:user_id] %>
+          <!-- 
+            if the user is logged in then
+              provide them with the option to log out
+          -->
+          <a href="/logout"><button type="button" class="btn btn-danger">Log-out</button></a>
+        <% else %> 
+          <!-- 
+            if the user is logged out then
+              provide them with the option to sign up or login
+          -->
+          <a href="/signup"><button type="button" class="btn btn-primary">Sign Up</button></a>
+          <a href="/login"><button type="button" class="btn btn-success">Log-In</button></a>
+        <% end %>
+        <div class="col-1">
+        </div>
+        </div>
+  </nav>
+
+  <div class="row">
+
+  <%= yield %>
+  </div>
+</div> <!-- container div -->
+
+</body>
+</html>

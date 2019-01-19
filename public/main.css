@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: url("./img/rumblr-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: antiquewhite;
+  }
+
+.navbar {
+  /* display: -webkit-flex; */
+  position: fixed;
+  justify-content: end;
+}
+
+.btn {
+  margin: 0.3rem;
+}
+
+.row {
+  justify-content: center;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  color: whitesmoke;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 1.5rem;
+  background-color: rgb(12, 10, 44, 0.85);
+}
