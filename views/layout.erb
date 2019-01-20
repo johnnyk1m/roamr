@@ -11,10 +11,13 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="col-1">
-  <nav class="navbar col-10">
-  Rumblr
+<div class="row topbar">
+  <div class="col-2">
+    <h1 class="logo">Roamr</h1>
+  </div>
+    <div class="col-7"> </div>
+    <div class="col-3">
+    <nav class="navbar">  
       
     <!-- check if the user is logged in -->
         <% if session[:user_id] %>
@@ -31,15 +34,18 @@
           <a href="/signup"><button type="button" class="btn btn-primary">Sign Up</button></a>
           <a href="/login"><button type="button" class="btn btn-success">Log-In</button></a>
         <% end %>
-        <div class="col-1">
-        </div>
-        </div>
+    </div>
   </nav>
+</div>
+<br>
+<div class="container">
 
-  <div class="row">
+<%# <div class="row"> %>
 
+  <p>
   <%= yield %>
-  </div>
+  </p>
+<%# </div> %>
 </div> <!-- container div -->
 
 </body>
