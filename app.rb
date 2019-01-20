@@ -77,8 +77,10 @@ post "/login" do
   end
 end
 
-# define the signout / logout route
+
 get "/logout" do
+  # erb(:logout)
+
   # this line signs a user out
   #   because their user_id is now nil, when we check
   #   if the user_id is set in the session on the view

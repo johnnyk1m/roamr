@@ -1,13 +1,13 @@
 <center>
-<div class="row">
+<%# <div class="row"> %>
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h2 class="card-title">Log-in</h2>
+    <form action="/login" method="post">
 <!-- 
   the action and the method indicate which route it will submit to
     post "/login" in app.rb
 -->
-    <form action="/login" method="post">
     <div class="forms">
       <!-- will be stored in the variable params[:username] in app.rb -->
       <input type="text" name="username" placeholder="Username">
@@ -19,5 +19,5 @@
     </form>
   </div>
 </div>
-</div>
+<%# </div> %>
 </center>

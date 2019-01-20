@@ -1,7 +1,6 @@
 require "sinatra/activerecord"
 require "pg"
 
-
   set :database, {
     adapter: "postgresql",
     database: "rumblr",
