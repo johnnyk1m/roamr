@@ -6,17 +6,15 @@ require "sinatra/flash"
 enable :sessions
 
 get "/" do
-  erb(:index)
+  user = User.find_by(username: params[:username])
+  if session[:user_id].nil?
+    erb(:index)
+  else
+    user = User.find(session[:user_id])
+    posts = Post.all.limit(20).reverse
+  end
+    erb(:index)
 end
-
-# loads the users index template
-get "/users" do
-  # loads all users from database
-  @users = User.all
-
-  erb(:users)
-end
-
 
 get "/signup" do
   erb(:signup)
@@ -24,7 +22,7 @@ end
 
 post "/signup" do
   # creates new User in database
-  @user = User.create(
+  user = User.create(
     username: params[:username],
     password: params[:password],
     first_name: params[:first_name],
@@ -34,10 +32,10 @@ post "/signup" do
 
   # loads the user, stores user id in session
   session[:user_id] = user.id
-
+  flash[:signup] = "You are now signed up as @user.username."
   # after logging the user in, redirect to the
   #   page where you can see all users
-  redirect "/users"
+  redirect "/"
 end
 
 
@@ -61,17 +59,35 @@ post "/login" do
     # display error
     flash[:error] = "There was a problem logging in"
 
-    # redirect to the signup page so they can try again
-    redirect "/signup"
+    redirect "/login"
   end
 end
 
 get "/logout" do
-  # erb(:logout)
 
   # signs user out: user_id is nil 
   session[:user_id] = nil
+  # flash[:signout] = "You have been signed out"
 
-  # redirect back to the homepage
+  # redirect "/logout"
+  erb(:logout)
+end
+
+# loads the users index template
+get "/users" do
+  # loads all users from database
+  # @users = User.all
+
+  erb(:users)
+end
+
+get "/delete_account" do
+
+  # find current user_id and deletes it
+  user = User.find(session[:user_id])
+  User.destroy(session[:user_id])
+  session[:user_id] = nil
+  flash[:warning] = "Account: #{user.username} has been destroyed."
+
   redirect "/"
 end
