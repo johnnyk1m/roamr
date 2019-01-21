@@ -3,7 +3,7 @@
   margin: 0; }
 
 body {
-  background: url("./img/rumblr-bg1.jpg") no-repeat center center fixed;
+  background: url("./img/roamr.jpg") no-repeat center center fixed;
   background-size: cover;
   color: antiquewhite;
   font-family: 'Montserrat', sans-serif;
@@ -24,7 +24,7 @@ body {
 } 
 
 nav {
-  background-color: rgba(9, 6, 48, 0.5);
+  background-color: rgba(4, 34, 7, 0.75);
   border-radius: 1.2rem;
   margin-top: 1rem;
 }
@@ -42,5 +42,5 @@ nav {
   color: whitesmoke;
   /* font-family: 'Montserrat', sans-serif; */
   border-radius: 1.5rem;
-  background-color: rgba(9, 6, 48, 0.5);
+  background-color: rgba(4, 34, 7, 0.75);
 }
