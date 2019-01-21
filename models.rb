@@ -3,6 +3,7 @@ require "pg"
 
   set :database, {
     adapter: "postgresql",
+    host: "localhost",
     database: "roamr",
     username: "postgres",
     password: "postgrespassword"
