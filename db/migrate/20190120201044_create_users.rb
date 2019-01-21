@@ -1,12 +1,12 @@
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
-    create_table :users do |t|
-      t.string :username
-      t.string :password
-
-      # same as t.timestamps
-      t.datetime :created_at
-      t.datetime :updated_at
+    create_table :users do |user|
+      user.string :username
+      user.string :password
+      user.string :first_name
+      user.string :last_name
+      user.string :email
+      user.datetime :created_at
     end
   end
 end
