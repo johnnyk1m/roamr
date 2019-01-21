@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>roamr</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab" rel="stylesheet">
@@ -14,16 +14,17 @@
 <div class="row">
   <div class="col-12">
     <nav class="navbar">
-    <a class="navbar-brand mx-auto logo" href="/">
-    <h1>Roamr</h1></a>
+    <a class="navbar-brand mx-l logo" href="/">
+    <h1>Roamr.</h1></a>
       
       <div class="navbar nav-link">
       <!-- check if user is logged in -->
       <% if session[:user_id] %>
         <!-- if user is logged in, show logout button -->
-        <a href="/logout"><button type="button" class="btn btn-danger">Log-out</button></a>
+        <a href="/logout"><button type="button" class="btn btn-secondary">Log-out</button></a>
+
       <% else %> 
-        <!-- if the user is logged out, show sign up or login -->
+        <!-- if the user is logged out, show sign up and login -->
         <a href="/signup"><button type="button" class="btn btn-primary">Sign Up</button></a>
         <a href="/login"><button type="button" class="btn btn-success">Log-In</button></a>
       <% end %>
@@ -40,5 +41,18 @@
 
 </div> <!-- container div -->
 
+<br>
+<footer>
+<center>
+  <span class="row">
+    <span class="col-12">
+      <a href="https://www.facebook.com"><img src="/img/facebook.png"></a>
+      <a href="https://www.instagram.com"><img src="/img/instagram.png"></a>
+      <a href="https://www.twitter.com"><img src="/img/twitter.png"></a>
+    </span>
+  </span>
+  <p></p>
+  </center>
+</footer>
 </body>
 </html>

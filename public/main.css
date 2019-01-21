@@ -44,3 +44,22 @@ nav {
   border-radius: 1.5rem;
   background-color: rgba(4, 34, 7, 0.75);
 }
+
+body{
+  animation: fadeIn 3s forwards; 
+  color: whitesmoke;
+}
+
+.hero img{
+  border-radius: 2rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+footer img {
+  height: 3.5rem;
+}

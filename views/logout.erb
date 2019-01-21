@@ -1,20 +1,14 @@
 <center>
-<h2>You have been successfully logged out.</h2>
+
+<h1>You have been successfully logged out.</h1>
 <br>
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <p>Would you like to sign back in?<p>
-    <!-- 
-      the action and the method indicate which route it will submit to
-        post "/login" in app.rb
-    -->
 
     <form action="/login" method="post">
     <div class="forms">
-      <!-- will be stored in the variable params[:username] in app.rb -->
       <input type="text" name="username" placeholder="Username">
-
-      <!-- will be stored in the variable params[:password] in app.rb -->
       <input type="password" name="password" placeholder="Password">
       <input type="submit" class="btn btn-success" value="Log back in">
     </div>
