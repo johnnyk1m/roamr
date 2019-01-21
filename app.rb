@@ -56,7 +56,7 @@ post "/login" do
     flash[:info] = "You are now signed in"
 
     # redirect to the users index page
-    redirect "/users"
+    redirect "/"
   else
     # display error
     flash[:error] = "There was a problem logging in"
