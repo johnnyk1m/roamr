@@ -11,41 +11,33 @@
 </head>
 <body>
 
-<div class="row topbar">
-  <div class="col-2">
-    <h1 class="logo">Roamr</h1>
-  </div>
-    <div class="col-7"> </div>
-    <div class="col-3">
-    <nav class="navbar">  
+<div class="row">
+  <div class="col-12">
+    <nav class="navbar">
+    <a class="navbar-brand mx-auto logo" href="/">
+    <h1>Roamr</h1></a>
       
-    <!-- check if the user is logged in -->
-        <% if session[:user_id] %>
-          <!-- 
-            if the user is logged in then
-              provide them with the option to log out
-          -->
-          <a href="/logout"><button type="button" class="btn btn-danger">Log-out</button></a>
-        <% else %> 
-          <!-- 
-            if the user is logged out then
-              provide them with the option to sign up or login
-          -->
-          <a href="/signup"><button type="button" class="btn btn-primary">Sign Up</button></a>
-          <a href="/login"><button type="button" class="btn btn-success">Log-In</button></a>
-        <% end %>
-    </div>
-  </nav>
+      <div class="navbar nav-link">
+      <!-- check if user is logged in -->
+      <% if session[:user_id] %>
+        <!-- if user is logged in, show logout button -->
+        <a href="/logout"><button type="button" class="btn btn-danger">Log-out</button></a>
+      <% else %> 
+        <!-- if the user is logged out, show sign up or login -->
+        <a href="/signup"><button type="button" class="btn btn-primary">Sign Up</button></a>
+        <a href="/login"><button type="button" class="btn btn-success">Log-In</button></a>
+      <% end %>
+      </div>
+    </nav>
+  </div>
 </div>
+
 <br>
+
 <div class="container">
 
-<%# <div class="row"> %>
+      <%= yield %>
 
-  <p>
-  <%= yield %>
-  </p>
-<%# </div> %>
 </div> <!-- container div -->
 
 </body>

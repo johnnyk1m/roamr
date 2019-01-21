@@ -1,6 +1,7 @@
 require "sinatra"
 # require "sinatra/flash"
-require_relative "models"
+require 'sinatra/activerecord'
+require_relative "./models"
 
 enable :sessions
 
@@ -26,7 +27,7 @@ end
 #   this route responds the /signup form
 post "/signup" do
   # creates the user in the database as a new User
-  user = User.create(
+  @user = User.create(
     username: params[:username],
     password: params[:password],
     first_name: params[:first_name],

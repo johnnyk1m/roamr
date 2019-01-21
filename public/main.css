@@ -3,26 +3,30 @@
   margin: 0; }
 
 body {
-  background: url("./img/rumblr-bg.jpg") no-repeat center center fixed;
+  background: url("./img/rumblr-bg1.jpg") no-repeat center center fixed;
   background-size: cover;
   color: antiquewhite;
   font-family: 'Montserrat', sans-serif;
   }
 
-.row{
+.container {
+  padding-top: 5rem;
+}
+
+.row {
   height: 4rem;
   margin: 0 auto;
 }
 
 .logo {
   font-family: 'Roboto Slab', serif;
-  position: fixed;
-  padding-top: 1rem;
-  padding-left: 4rem;
-}
+  color: antiquewhite;
+} 
 
-.navbar {
-  position: fixed;
+nav {
+  background-color: rgba(9, 6, 48, 0.5);
+  border-radius: 1.2rem;
+  margin-top: 1rem;
 }
 
 .btn {
@@ -38,5 +42,5 @@ body {
   color: whitesmoke;
   /* font-family: 'Montserrat', sans-serif; */
   border-radius: 1.5rem;
-  background-color: rgb(12, 10, 44, 0.85);
+  background-color: rgba(9, 6, 48, 0.5);
 }
