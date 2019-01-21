@@ -1,7 +1,7 @@
 require "sinatra"
-# require "sinatra/flash"
-require 'sinatra/activerecord'
+require "sinatra/activerecord"
 require_relative "./models"
+require "sinatra/flash"
 
 enable :sessions
 
