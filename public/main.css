@@ -3,7 +3,7 @@
   margin: 0; }
 
 body {
-  background: url("./img/roamr.jpg") no-repeat center center fixed;
+  background: url("./img/rumblr-bg1.jpg") no-repeat center center fixed;
   background-size: cover;
   color: antiquewhite;
   font-family: 'Montserrat', sans-serif;
@@ -19,7 +19,7 @@ body {
 }
 
 .logo {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Aleo', serif;
   color: antiquewhite;
 } 
 

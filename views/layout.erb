@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>roamr</title>
+  <title>Rōmr</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Aleo" rel="stylesheet">
 </head>
 <body>
 
@@ -15,18 +15,19 @@
   <div class="col-12">
     <nav class="navbar">
     <a class="navbar-brand mx-l logo" href="/">
-    <h1>Roamr.</h1></a>
+    <h1><strong>roamr.</strong></h1></a>
       
       <div class="navbar nav-link">
       <!-- check if user is logged in -->
       <% if session[:user_id] %>
         <!-- if user is logged in, show logout button -->
-        <a href="/logout"><button type="button" class="btn btn-secondary">Log-out</button></a>
+        <a href="/account"><button type="button" class="btn btn-warning">Account</button></a>
+        <a href="/logout"><button type="button" class="btn btn-outline-secondary">Log out</button></a>
 
       <% else %> 
         <!-- if the user is logged out, show sign up and login -->
-        <a href="/signup"><button type="button" class="btn btn-primary">Sign Up</button></a>
-        <a href="/login"><button type="button" class="btn btn-success">Log-In</button></a>
+        <a href="/signup"><button type="button" class="btn btn-primary">Sign up</button></a>
+        <a href="/login"><button type="button" class="btn btn-success">Log in</button></a>
       <% end %>
       </div>
     </nav>
