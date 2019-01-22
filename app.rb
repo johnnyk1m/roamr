@@ -16,6 +16,21 @@ get "/" do
     erb(:index)
 end
 
+get '/create_post' do
+  @user = User.find(session[:user_id])
+  erb(:create_post)
+end
+
+post '/create_post' do
+  @user = User.find(session[:user_id])
+  @post = Post.create(
+    user_id: @user.id,
+    title: params[:title],
+    post: params[:post],
+  )
+  redirect '/'
+end
+
 get "/signup" do
   erb(:signup)
 end

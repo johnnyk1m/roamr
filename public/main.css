@@ -45,6 +45,13 @@ nav {
   background-color: rgba(4, 34, 7, 0.75);
 }
 
+.post {
+  color: whitesmoke;
+  /* font-family: 'Montserrat', sans-serif; */
+  border-radius: 1.5rem;
+  background-color: rgba(4, 34, 7, 0.75);
+}
+
 body{
   animation: fadeIn 3s forwards; 
   color: whitesmoke;

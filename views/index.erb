@@ -1,8 +1,33 @@
+
+<% unless @user.nil? %>
+
+  <h1><%= @user[:first_name].capitalize %>'s Adventure Blog</h1>
+
+<p>
+  <a href="/create_post"><button type="button" class="btn btn-light">Create new post</button></a>
+</p>
+
+  <% if @posts == [] %>
+  <h3>You don't have posts yet.</h3>
+  
+  <% else %>
+      <% @posts.each do |post|%>
+  <div class="row">
+  <div class="col-12 post">
+      <h5><strong><%= post[:title] %></strong></h5>
+      <p><%= post[:post] %></p>
+      <em>Created at: <%= post[:created_at] %></em>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+
+
+<!-- show this if not logged in.-->
+<% else %>
 <center>
 <div class="hero">
-
 <img src="./img/hero.png">
-
   <br><br>
   <h1><strong>Join us or log-in</strong></h1>
   <br><br>
@@ -19,3 +44,4 @@
     </a>
 </div>
 </center>
+<% end %>

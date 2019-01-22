@@ -1,0 +1,35 @@
+<%# <div class="container">
+<h2>Create new post</h2>
+<form action="/new_post" method="POST">
+  <div class="row">
+    <div class="col-12">
+      <h4>Title</h4>
+      <p><input type="text" name="title" class="form-control"></p>
+    </div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-12">
+      <h4>Post</h4>
+      <textarea cols="30" rows="10" name="post" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-12">
+  <input type="submit" class="btn btn-outline-success btn-sm current_btn" value="Publish">
+  </button>
+    </div>
+  </div> %>
+
+
+  <div class="card w-75 mx-auto">
+    <div class="card-body">
+      <h2 class="card-title center">Create new post</h2>
+      <form action="/create_post" method="POST">
+      <p class="card-text"><h4>Title</h4>
+      <input type="text" name="title" class="form-control"></p>
+      <h4>Post</h4>
+      <textarea cols="30" rows="10" name="post" class="form-control"></textarea>
+      <p><input type="submit" class="btn btn-success mx-auto" value="Publish"></p>
+    </div>
+  </div>
