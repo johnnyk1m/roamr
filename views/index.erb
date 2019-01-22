@@ -12,8 +12,7 @@
   
   <% else %>
       <% @posts.each do |post|%>
-  <div class="row">
-  <div class="col-12 post">
+  <div class="post">
       <h5><strong><%= post[:title] %></strong></h5>
       <p><%= post[:post] %></p>
       <em>Created at: <%= post[:created_at] %></em>
