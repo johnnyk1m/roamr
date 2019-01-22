@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       post.string :post
       post.datetime :created_at
       post.datetime :updated_at
+      post.references :users
     end
   end
 end
