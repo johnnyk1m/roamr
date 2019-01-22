@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
 }
 
+div {
+  display: inline-block;
+}
+
 .logo {
   font-family: 'Aleo', serif;
   color: antiquewhite;
