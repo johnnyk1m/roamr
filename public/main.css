@@ -19,7 +19,7 @@ body {
 }
 
 div {
-  display: inline-block;
+  position: relative;
 }
 
 .logo {
@@ -53,7 +53,8 @@ nav {
   color: whitesmoke;
   /* font-family: 'Montserrat', sans-serif; */
   border-radius: 1.5rem;
-  background-color: rgba(4, 34, 7, 0.75);
+  background-color: rgba(4, 34, 7);
+  margin: 1rem;
 }
 
 body{
