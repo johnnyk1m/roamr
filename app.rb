@@ -35,6 +35,18 @@ post '/create_post' do
   redirect '/'
 end
 
+get '/delete_post/:id' do
+  @user = User.find(session[:user_id])
+  @post = Post.find(params[:id])
+  @post.destroy
+
+  redirect '/destroy_post'
+end
+
+get "/destroy_post" do
+  erb(:destroy_post)
+end
+
 get "/signup" do
   erb(:signup)
 end
@@ -104,10 +116,8 @@ get "/account" do
   if session[:user_id]
     erb(:account)
    end
- 
 end
 
 get "/destroy" do
   erb(:destroy)
 end
-
