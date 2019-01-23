@@ -16,11 +16,20 @@ get "/" do
     erb(:index)
 end
 
+get "/users" do
+  # @user = User.find_by(username: params[:username])
+
+  # unless @user == nil
+  # if @user
+  # @userposts = @user.posts.limit(20).reverse
+  # erb(:users)
+
+  # else
+  erb(:user_none)
+  # end
+end
+
 get '/create_post' do
-#   output = ''
-#   output += erb :index
-#   output += erb :posts, locals: { posts: Post.order(:created_at).all }
-# output
   @user = User.find(session[:user_id])
   erb(:create_post)
 end
@@ -58,7 +67,8 @@ post "/signup" do
     password: params[:password],
     first_name: params[:first_name],
     last_name: params[:last_name],
-    email: params[:email],
+    birthday: params[:birthday],
+    email: params[:email]
   )
 
   # stores user id in session
@@ -91,14 +101,6 @@ get "/logout" do
   session[:user_id] = nil
 
   erb(:logout)
-end
-
-# loads the users index template
-get "/users" do
-  # loads all users from database
-  # @users = User.all
-
-  erb(:users)
 end
 
 get "/delete_account/:id" do
