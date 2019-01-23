@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_01_21_192114) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.date "birthday"
     t.datetime "created_at"
   end
 
