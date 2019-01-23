@@ -11,12 +11,16 @@ get "/" do
     erb(:index)
   else
     @user = User.find(session[:user_id])
-    @posts = Post.all.limit(20).reverse
+    @posts = @user.posts.limit(20).reverse
   end
     erb(:index)
 end
 
 get '/create_post' do
+#   output = ''
+#   output += erb :index
+#   output += erb :posts, locals: { posts: Post.order(:created_at).all }
+# output
   @user = User.find(session[:user_id])
   erb(:create_post)
 end
@@ -26,7 +30,7 @@ post '/create_post' do
   @post = Post.create(
     user_id: @user.id,
     title: params[:title],
-    post: params[:post],
+    post: params[:post]
   )
   redirect '/'
 end

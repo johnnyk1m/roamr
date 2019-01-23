@@ -12,7 +12,7 @@ require "pg"
 class User < ActiveRecord::Base
   # only one user can have their username
   validates_uniqueness_of :username
-  has_many :posts
+  has_many :posts, :dependent => :destroy
 end
 
 class Post < ActiveRecord::Base
