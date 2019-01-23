@@ -14,18 +14,29 @@ get "/" do
     @posts = @user.posts.limit(20).reverse
   end
     erb(:index)
-end
 
-get "/users" do
-  # @user = User.find_by(username: params[:username])
+    @user = User.find_by(username: params[:username])
 
   # unless @user == nil
+  if @user
+  @userposts = @user.posts.limit(20).reverse
+  erb(:users)
+
+  else
+  erb(:user_none)
+  end
+end
+
+post "/users" do
+  # @user = User.find_by(username: params[:username])
+
+  # # unless @user == nil
   # if @user
   # @userposts = @user.posts.limit(20).reverse
   # erb(:users)
 
   # else
-  erb(:user_none)
+  # erb(:user_none)
   # end
 end
 
