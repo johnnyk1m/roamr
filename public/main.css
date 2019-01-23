@@ -47,6 +47,8 @@ nav {
   /* font-family: 'Montserrat', sans-serif; */
   border-radius: 1.5rem;
   background-color: rgba(4, 34, 7, 0.75);
+  margin: 1rem;
+
 }
 
 .post {
@@ -55,6 +57,7 @@ nav {
   border-radius: 1.5rem;
   background-color: rgba(4, 34, 7);
   margin: 1rem;
+  padding: 1rem;
 }
 
 body{
