@@ -14,8 +14,10 @@ get "/" do
     @posts = @user.posts.limit(20).reverse
   end
     erb(:index)
+end
 
-    @user = User.find_by(username: params[:username])
+post "/users" do
+  @user = User.find_by(username: params[:username])
 
   # unless @user == nil
   if @user
@@ -25,19 +27,6 @@ get "/" do
   else
   erb(:user_none)
   end
-end
-
-post "/users" do
-  # @user = User.find_by(username: params[:username])
-
-  # # unless @user == nil
-  # if @user
-  # @userposts = @user.posts.limit(20).reverse
-  # erb(:users)
-
-  # else
-  # erb(:user_none)
-  # end
 end
 
 get '/create_post' do
