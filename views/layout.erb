@@ -21,12 +21,14 @@
       <!-- check if user is logged in -->
       <% if session[:user_id] %>
 
-       <form class="form-inline" action="/" method="get">
+       <%# <form class="form-inline" action="/" method="get">
       <input class="form-control mr-sm-2 mx-auto" type="text" name="username" placeholder="Search by Username">
       <button class="btn btn-dark" type="submit">Search</button>
-      </form>
+      </form> %>
+
 
         <!-- if user is logged in, show logout button -->
+        <a href="/users"><button type="button" class="btn btn-warning">Users</button></a>
         <a href="/account"><button type="button" class="btn btn-warning">Account</button></a>
         <a href="/logout"><button type="button" class="btn btn-outline-secondary">Log out</button></a>
 
