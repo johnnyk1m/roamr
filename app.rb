@@ -18,10 +18,7 @@ end
 
 get "/users" do
   @user = User.all
-  # @user = User.find(session[:user_id])
-  # unless @user == nil
   if @user
-  # @userposts = @user.posts.limit(20).reverse
   erb(:users)
 
   else
@@ -30,12 +27,13 @@ get "/users" do
 end
 
 get "/user_post/:id" do
-  unless @user == nil
-  @user = User.find_by(id: params[:id])
+  @user = User.find(params[:id])
   @posts = @user.posts.limit(20).reverse
+  if @posts.empty?
+    erb :nopost
   else
-    erb(:nopost)
-    end
+    erb :user_post
+  end
 end
 
 get '/create_post' do

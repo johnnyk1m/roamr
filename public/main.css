@@ -55,7 +55,7 @@ nav {
   color: whitesmoke;
   /* font-family: 'Montserrat', sans-serif; */
   border-radius: 1.5rem;
-  background-color: rgba(4, 34, 7);
+  background-color: rgba(4, 34, 7, 0.85);
   margin: 1rem;
   padding: 1rem;
 }

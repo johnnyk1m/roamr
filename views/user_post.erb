@@ -1,8 +1,8 @@
-<h1>All Posts</h1>
+<h1 class="post"><%= @user[:username].capitalize %>'s Posts</h1>
 
 <div class="post">
-<% @post.each do |post| %>
-  <%= post.title %><br>
-  <%= post.content %><br>
+<% @posts.each do |post| %>
+  <strong>Title: <%= post.title.capitalize %></strong><br>
+ <p><%= post.post %></p><br>
 <% end %>
 </div>
