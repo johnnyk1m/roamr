@@ -1,5 +1,9 @@
-<h1>Users</h1>
+<h1 class="post">All Users</h1>
 
+<div class="post">
+<p>
 <% @user.each do |user| %>
-  <a href="/user_post/<%= user.id%>"><%= user.username %></a><br>
+  <a href="/user_post/<%= user.id%>"><%= user.username %></a>
+</p>
 <% end %>
+</div>
