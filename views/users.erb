@@ -1,20 +1,5 @@
-<h1>User Profile</h1>
+<h1>Users</h1>
 
-Username: <%= @user.username %><br>
-First Name: <%= @user.first_name %><br>
-Last Name: <%= @user.last_name %><br>
-Birthday: <%= @user.birthday %><br>
-
-
-<!-- <% @posts.each do |post| %>
-<%= post.title %><br>
-<%= post.content %>
-<% end %> -->
-
-
- <!-- <% @users.each do |user| %>
-  <%= user.username %><br>
-  <%= user.first_name %><br>
-  <%= user.last_name %><br>
-  <%= user.birthday %><br>
-<% end %> --> 
+<% @user.each do |user| %>
+  <a href="/user_post/<%= user.id%>"><%= user.username %></a><br>
+<% end %>
